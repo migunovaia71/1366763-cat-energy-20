@@ -1,1 +1,79 @@
-// Начните писать стили здесь
+@import "nav.less";
+@import "index-info.less";
+@import "program.less";
+@import "features.less";
+@import "example.less";
+@import "footer.less";
+@import "header.less";
+@import "catalog.less";
+@import "show-more.less";
+@import "additional.less";
+@import "form.less";
+
+/* Variables */
+
+:root {
+  --basic_green: #68B738;
+  --basic_grey: #F2F2F2;
+  --special_grey-2: #EBEBEB;
+  --special_grey: #CDCDCD;
+  --special_grey-3: #666666;
+  --special_light-grey: #EAEAEA;
+  --special_light-grey-2: #D9D9D9;
+  --special_dark-grey: #444444;
+  --special_dark-grey-2: #222222;
+  --extra_dark_grey: #111111;
+  --status_error: #FF8282;
+  --basic_green-2: #5EAA2F;
+  --basic_black: #000000;
+  --basic_white: #FFFFFF;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  // color: var(--special_dark-grey);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic_black);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.h1 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  // color: var(--basic__black);
+  padding: 30px 20px 40px;
+  margin-bottom: 8px;
+  border-top: 1px solid var(--special_light-grey-2);
+  // border-bottom: 1px solid var(--special_light-grey-2);
+}
