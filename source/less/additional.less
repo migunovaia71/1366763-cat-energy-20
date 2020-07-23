@@ -26,7 +26,8 @@
     line-height: 14px;
   }
 
-  &__slogan {
+  &__gift {
+    position: relative;
     width: 280px;
     height: 289px;
     background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
@@ -38,9 +39,19 @@
     padding-top: 188px;
   }
 
+  &__slogan {
+    display: block;
+  }
+
+  &__img {
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__item:last-child {
     margin-bottom: 150px;
   }
+
 }
-
-
