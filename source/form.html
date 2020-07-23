@@ -3,28 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="body">
     <header class="header">
-      <a href="index.html" class="header__logo1">
-        <img src="img/logo1.svg" width="34" height="38" alt="Cat Energy">
-      </a>
-      <a href="index.html" class="header__logo2">
-        <img src="img/logo2.svg" width="101" height="18" alt="Cat Energy">
-      </a>
+      <div class="header__wrap">
+        <a href="index.html" class="header__logo">
+          <img src="img/logo-mobile.svg" width="190" height="38" alt="Cat Energy">
+        </a>
+      </div>
       <nav class="nav">
-        <button class="nav__toggle" type="button">
+        <button class="nav__open" type="button">
           <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <button class="nav__close" type="button">
+          <span class="visually-hidden">Закрыть меню</span>
         </button>
         <div class="nav__wrap">
           <ul class="nav__list">
-            <li class="nav__item nav__item--activ">
+            <li class="nav__item">
               <a href="index.html">Главная</a>
             </li>
             <li class="nav__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--activ">
               <a>Подбор программы</a>
             </li>
           </ul>
@@ -34,36 +38,36 @@
 
     <main class="main">
       <h1 class="h1">Подбор программы</h1>
-      <span class="main__text">Заполните форму, и мы подберем программу питания для вашего кота</span>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__wrap">
+        <span class="form__text">Заполните форму, и мы подберем программу питания для вашего кота</span>
+        <fieldset class="form__wrap fielset-border">
           <ul class="form__list">
             <li>
-              <label for="name">Имя:*</label>
+              <label class="form__label" for="name">Имя:*</label>
               <input class="form__input" type="text" id="name" name="name" placeholder="Барсик" required>
             </li>
             <li>
-              <label for="weight">Вес (кг):*</label>
+              <label class="form__label" for="weight">Вес (кг):*</label>
               <input class="form__input" type="text" id="weight" name="weight" placeholder="7" required>
             </li>
             <li>
-              <label for="age">Возраст (лет):</label>
+              <label class="form__label" for="age">Возраст (лет):</label>
               <input class="form__input" type="text" id="age" name="age" placeholder="7">
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__wrap">
+        <fieldset class="form__wrap fielset-border">
           <ul class="form__list">
             <li>
-              <label for="slim">Похудение</label>
+              <label class="form__radio--label" for="slim">Похудение</label>
               <input class="form__radio visually-hidden" type="radio" id="slim" name="slim" checked>
             </li>
             <li>
-              <label for="pro">Набор массы</label>
+              <label class="form__radio--label" for="pro">Набор массы</label>
               <input class="form__radio visually-hidden" type="radio" id="pro" name="pro">
             </li>
             <li>
-              <label for="advice">Не знаю (нужен ваш совет)</label>
+              <label class="form__radio--label" for="advice">Не знаю (нужен ваш совет)</label>
               <input class="form__radio visually-hidden" type="radio" id="advice" name="advice">
             </li>
           </ul>
@@ -72,11 +76,11 @@
           <legend class="form__sublitle">Контактные данные (владельца кота)</legend>
           <ul class="form__list">
             <li>
-              <label for="email">E-mail:*</label>
+              <label class="form__label" for="email">E-mail:*</label>
               <input class="form__input" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
             </li>
             <li>
-              <label for="tel">Телефон:*</label>
+              <label class="form__label" for="tel">Телефон:*</label>
               <input class="form__input" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90">
             </li>
           </ul>
@@ -84,39 +88,41 @@
         <fieldset class="form__wrap">
           <legend class="form__sublitle">Комментарий</legend>
           <label class="visually-hidden" for="habits">Повадки кота</label>
-          <textarea rows="5" class="form__input" type="text" id="habits" name="habits" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form__textarea" rows="5" class="form__input" type="text" id="habits" name="habits" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__wrap">
           <legend class="form__sublitle">Дополнительно</legend>
           <ul class="form__list">
             <li>
-              <label for="sugar">Сахарозаменитель</label>
+              <label class="form__checkbox--label" for="sugar">Сахарозаменитель</label>
               <input class="form__checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
             </li>
             <li>
-              <label for="water">Питьевая вода</label>
+              <label class="form__checkbox--label" for="water">Питьевая вода</label>
               <input class="form__checkbox visually-hidden" type="checkbox" id="water" name="water">
             </li>
             <li>
-              <label for="milk">Молоко</label>
+              <label class="form__checkbox--label" for="milk">Молоко</label>
               <input class="form__checkbox visually-hidden" type="checkbox" id="milk" name="milk">
             </li>
             <li>
-              <label for="vitamin">Витамины</label>
+              <label class="form__checkbox--label" for="vitamin">Витамины</label>
               <input class="form__checkbox visually-hidden" type="checkbox" id="vitamin" name="vitamin">
             </li>
           </ul>
         </fieldset>
         <button class="form__btn" type="submit">Отправить заявку</button>
+        <span class="form__info">* - Обязательные поля</span>
       </form>
-      <span class="form__info">* - Обязательные поля</span>
     </main>
 
     <footer class="footer">
       <section class="footer__address">
-        <span class="footer__address-slogan">Приглашаем к сотрудничеству дилеров!</span>
-        <span class="footer__address-info">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
-        <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595232377261!5m2!1sru!2sru" width="320" height="362" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="footer__address-wrap">
+          <span class="footer__address-slogan">Приглашаем к сотрудничеству дилеров!</span>
+          <span class="footer__address-info">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+        </div>
+        <iframe class="footer__address-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595232377261!5m2!1sru!2sru" width="320" height="362" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
       <a href="index.html" class="footer__logo">
         <img src="img/logo3.svg" width="128" height="24" alt="Cat Energy">
