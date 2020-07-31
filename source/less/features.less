@@ -3,6 +3,7 @@
   padding: 0 20px;
 
   &__list {
+    display: grid;
     margin: 0px;
     padding: 0px;
   }
@@ -16,5 +17,42 @@
 
   &__item {
     font-family: Arial;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .features {
+    padding: 0 30px;
+
+    &__list {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 37px;
+      grid-column-gap: 153px;
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__item {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .features {
+    padding: 0 110px;
+
+    &__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 94px;
+    }
   }
 }

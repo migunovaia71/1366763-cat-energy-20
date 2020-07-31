@@ -1,9 +1,21 @@
 .index-info {
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   padding-top: 27px;
-  padding-bottom: 167px;
-  margin-bottom: 135px;
+  margin-bottom: 22px;
+  min-height: 480px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    z-index: -1;
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
 
   &__title {
     font-size: 36px;
@@ -22,7 +34,104 @@
     text-align: center;
   }
 
-  &__img {
+  &__img--desktop{
     position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__img--desktop {
+    width: 270px;
+  }
+
+  &__img--tablet {
+    display: none;
+  }
+
+  &__btn {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    display: block;
+    width: 280px;
+    text-align: center;
+    color: var(--basic_white);
+    text-transform: uppercase;
+    background-color: var(--basic_green);
+    line-height: 40px;
+    align-self: center;
+    margin-top: auto;
+  }
+
+}
+
+@media (min-width: @tablet-width) {
+
+  .index-info {
+    align-items: start;
+    padding: 0px 117px;
+    min-height: 810px;
+    margin-bottom: 0px;
+
+    &__title,
+    &__slogan {
+      color: var(--basic_black);
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+      margin: 0px;
+      margin-bottom: 40px;
+    }
+
+    &__slogan {
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &__img--tablet {
+      position: absolute;
+      bottom: 0px;
+      z-index: -1;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__img--desktop {
+      display: none;
+    }
+
+    &__btn {
+      margin-top: 0px;
+      align-self: flex-start;
+      width: 244px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .index-info {
+
+    padding-left: 190px;
+    min-height: 470px;
+
+    &__img--tablet {
+      display: none;
+    }
+
+    &__img--desktop {
+      display: block;
+      width: 552px;
+      top: -80px;
+      left: 58%;
+    }
   }
 }

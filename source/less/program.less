@@ -1,9 +1,16 @@
 .program {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 30px;
+  padding: 0px 20px;
 
   &__wrap {
     background-color: var(--basic_grey);
     padding: 30px 33px 18px 19px;
+  }
+
+  &__wrap:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   &__title {
@@ -12,18 +19,6 @@
     text-transform: uppercase;
     color: var(--basic_black);
     font-weight: normal;
-  }
-
-  &__btn {
-    font-family: "Oswald", "Arial Narrow", sans-serif;
-    display: block;
-    width: 280px;
-    text-align: center;
-    color: var(--basic_white);
-    text-transform: uppercase;
-    background-color: var(--basic_green);
-    line-height: 40px;
-    margin-left: 20px;
   }
 
   &__text {
@@ -35,5 +30,54 @@
     line-height: 16px;
     text-transform: uppercase;
     color: var(--basic_black);
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .program {
+    margin-bottom: 45px;
+    padding: 0px 30px;
+
+    &__wrap {
+      padding: 77px 62px 55px 52px;
+    }
+
+    &__wrap:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 70px;
+    padding: 0px 110px;
+
+    &__wrap {
+      padding: 41px 51px 55px 52px;
+    }
+
+    &__wrap:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    &__wrap:nth-child(odd) {
+      margin-right: 80px;
+    }
   }
 }
