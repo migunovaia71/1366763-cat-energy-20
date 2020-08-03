@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -37,82 +37,86 @@
     </header>
 
     <main class="main">
-      <h1 class="h1">Подбор программы</h1>
       <form class="order" action="https://echo.htmlacademy.ru" method="post">
-        <span class="order__text">Заполните форму, и мы подберем программу питания для вашего кота</span>
-        <fieldset class="order__wrap order__wrap--border">
-          <ul class="order__list">
-            <li class="order__item">
-              <label class="order__label" for="name">Имя:*</label>
-              <input class="order__input" type="text" id="name" name="name" placeholder="Барсик" required>
-            </li>
-            <li class="order__item">
-              <label class="order__label" for="weight">Вес (кг):*</label>
-              <input class="order__input" type="text" id="weight" name="weight" placeholder="7" required>
-            </li>
-            <li class="order__item">
-              <label class="order__label" for="age">Возраст (лет):</label>
-              <input class="order__input" type="text" id="age" name="age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order__wrap  order__wrap--border">
-          <ul class="order__list">
-            <li class="order__item">
-              <label class="order__radio--label" for="slim">Похудение</label>
-              <input class="order__radio visually-hidden" type="radio" id="slim" name="slim" checked>
-            </li>
-            <li class="order__item">
-              <label class="order__radio--label" for="pro">Набор массы</label>
-              <input class="order__radio visually-hidden" type="radio" id="pro" name="pro">
-            </li>
-            <li class="order__item">
-              <label class="order__radio--label" for="advice">Не знаю (нужен ваш совет)</label>
-              <input class="order__radio visually-hidden" type="radio" id="advice" name="advice">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="order__wrap">
-          <legend class="order__subtitle">Контактные данные (владельца кота)</legend>
-          <ul class="order__list">
-            <li class="order__item">
+        <h1 class="order__title">Подбор программы</h1>
+        <span class="order__text">Заполните форму, и мы подберем <br>программу питания для вашего кота</span>
+        <div class="order__wrap--cat">
+          <div class="order__wrap order__wrap--border">
+            <ul class="order__list">
+              <li class="order__item">
+                <label class="order__label" for="name">Имя:*</label>
+                <input class="order__input" type="text" id="name" name="name" required placeholder="Барсик">
+              </li>
+              <li class="order__item">
+                <label class="order__label" for="weight">Вес&nbsp;(кг):*</label>
+                <input class="order__input" type="text" id="weight" name="weight" required placeholder="7">
+              </li>
+              <li class="order__item">
+                <label class="order__label" for="age">Возраст&nbsp;(лет):</label>
+                <input class="order__input" type="text" id="age" name="age" placeholder="7">
+              </li>
+            </ul>
+          </div>
+          <div class="order__wrap order__wrap--border">
+            <ul class="order__list order__list--frame">
+              <li class="order__item">
+                <label class="order__radio--label" for="slim">Похудение</label>
+                <input class="order__radio visually-hidden" type="radio" id="slim" name="slim" checked>
+              </li>
+              <li class="order__item">
+                <label class="order__radio--label" for="pro">Набор массы</label>
+                <input class="order__radio visually-hidden" type="radio" id="pro" name="pro">
+              </li>
+              <li class="order__item">
+                <label class="order__radio--label" for="advice">Не знаю (нужен ваш совет)</label>
+                <input class="order__radio visually-hidden" type="radio" id="advice" name="advice">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="order__wrap">
+          <div class="order__subtitle">Контактные данные (владельца кота)</div>
+          <ul class="order__list order__list--contact">
+            <li class="order__item order__item--contact">
               <label class="order__label" for="email">E-mail:*</label>
               <input class="order__input" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
             </li>
-            <li class="order__item">
+            <li class="order__item order__item--contact">
               <label class="order__label" for="tel">Телефон:*</label>
-              <input class="order__input" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90">
+              <input class="order__input" type="email" id="tel" name="tel" placeholder="8 (960) 900-60-90">
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="order__wrap">
-          <legend class="order__subtitle">Комментарий</legend>
+        </div>
+        <div class="order__wrap">
+          <div class="order__subtitle">Комментарий</div>
           <label class="visually-hidden" for="habits">Повадки кота</label>
           <textarea class="order__textarea" rows="5" class="order__input" type="text" id="habits" name="habits" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
-        <fieldset class="order__wrap">
-          <legend class="order__subtitle">Дополнительно</legend>
-          <ul class="order__list">
-            <li class="order__item">
+        </div>
+        <div class="order__wrap">
+          <div class="order__subtitle">Дополнительно</div>
+          <ul class="order__list order__list--extra">
+            <li class="order__item order__item--extra">
               <label class="order__checkbox--label" for="sugar">Сахарозаменитель</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
             </li>
-            <li class="order__item">
+            <li class="order__item order__item--extra">
               <label class="order__checkbox--label" for="water">Питьевая вода</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="water" name="water">
             </li>
-            <li class="order__item">
+            <li class="order__item order__item--extra">
               <label class="order__checkbox--label" for="milk">Молоко</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="milk" name="milk">
             </li>
-            <li class="order__item">
+            <li class="order__item order__item--extra">
               <label class="order__checkbox--label" for="vitamin">Витамины</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="vitamin" name="vitamin">
             </li>
           </ul>
-        </fieldset>
-        <button class="order__btn" type="submit">Отправить заявку</button>
-        <span class="order__info">* - Обязательные поля</span>
+        </div>
+        <div class="order__wrap--btn">
+          <button class="order__btn" type="submit">Отправить заявку</button>
+          <span class="order__info">* - Обязательные поля</span>
+        </div>
       </order>
     </main>
 
