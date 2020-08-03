@@ -2,6 +2,8 @@
 
   padding: 0px 20px;
   margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
 
   &__title {
     font-weight: normal;
@@ -16,6 +18,7 @@
     line-height: 16px;
     text-transform: uppercase;
     color: var(--special_dark-grey-2);
+    margin: 0px;
   }
 
   &__info,
@@ -24,34 +27,176 @@
     color: var(--special_dark-grey);
     font-size: 14px;
     line-height: 14px;
+    margin: 0px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__gift {
-    position: relative;
-    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 289px;
+    width: 280px;
     background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
     font-family: Arial;
     font-size: 16px;
     line-height: 20px;
     color: var(--basic_white);
     text-align: center;
-    padding-top: 188px;
   }
 
-  &__slogan {
-    display: block;
-  }
-
-  &__img {
-    position: absolute;
-    top: 58px;
-    left: 50%;
-    transform: translateX(-50%);
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 19px;
+    border-bottom: 1px solid var(--special_grey);
+    margin-bottom: 13px;
   }
 
   &__item:last-child {
-    margin-bottom: 150px;
+    margin-bottom: 39px;
   }
 
+  &__btn {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+    color: var(--basic_white);
+    text-transform: uppercase;
+    background-color: var(--basic_green);
+    line-height: 40px;
+    font-size: 16px;
+    border: none;
+    margin: 0px auto;
+    padding: 0px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .additional {
+
+    padding: 0px 30px;
+    margin-bottom: 76px;
+
+    &__list {
+      border: 1px solid var(--special_grey);
+      padding: 27px 0px;
+      margin-bottom: 69px;
+    }
+
+    &__subtitle,
+    &__wrap {
+      padding: 0px 37px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+      margin: 0px;
+      margin-bottom: 80px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__info,
+    &__price {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__item {
+      padding-bottom: 28px;
+      margin-bottom: 26px;
+    }
+
+    &__item:last-child {
+      border: none;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    &__btn {
+      max-width: 632px;
+      margin: 0px 37px;
+    }
+
+    &__gift {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
+      height: 200px;
+      width: 708px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional {
+
+    padding: 0px 110px;
+    margin-bottom: 86px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__title {
+      width: 100%;
+    }
+
+    &__list {
+      border: none;
+      padding: 0px;
+    }
+
+    &__item, &__item:last-child {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--special_grey);
+      padding: 0px;
+      padding: 15px 0px;
+      margin: 0px;
+    }
+
+    &__item:first-child {
+      border-top: 1px solid var(--special_grey);
+    }
+
+    &__subtitle {
+      padding: 0px;
+      width: 200px;
+    }
+
+    &__btn {
+      width: 244px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    &__wrap {
+      padding: 0px;
+      margin: 0px;
+      margin-right: 40px;
+      width: 290px;
+    }
+
+    &__gift {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
+      height: 289px;
+      width: 245px;
+    }
+  }
 }

@@ -1,10 +1,21 @@
 .order {
   margin-bottom: 35px;
 
+  &__title {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 30px 20px 40px;
+    margin-bottom: 8px;
+    border-top: 1px solid var(--special_light-grey-2);
+  }
+
   &__wrap {
     border: none;
     padding: 0px 20px;
+    margin: 0px;
     margin-bottom: 30px;
+
   }
 
   &__wrap--border {
@@ -19,6 +30,11 @@
 
   &__item {
     display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 13px;
   }
 
   &__subtitle {
@@ -37,20 +53,23 @@
   }
 
   &__label{
+    align-self: center;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
     color: var(--special_dark-grey);
-    margin-right: 14px;
+    margin-right: 15px;
   }
 
   &__input {
+    display: block;
+    flex-grow: 1;
+    max-width: 100%;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
     color: var(--special_dark-grey);
     padding: 13px 15px 15px;
-    flex-grow: 1;
   }
 
   &__input::placeholder,
@@ -93,5 +112,25 @@
     font-family: Arial;
     text-align: center;
   }
+}
 
+@media (min-width: @tablet-width) {
+
+  .order {
+    margin-bottom: 72px;
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      padding: 0px 30px;
+      margin: 0px;
+      margin-bottom: 54px;
+      border: none;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
 }

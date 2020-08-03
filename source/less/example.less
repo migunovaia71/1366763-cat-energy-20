@@ -1,5 +1,7 @@
 .example {
 
+  display: flex;
+  flex-wrap: wrap;
   padding: 30px 20px 39px;
   margin-bottom: 28px;
   background-color: var(--special_light-grey);
@@ -11,6 +13,30 @@
     font-weight: normal;
   }
 
+  &__stats {
+    display: flex;
+    // justify-content: center;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 124px;
+    text-align: center;
+    padding: 15px 0px 18px;
+    border: 1px solid var(--special_grey);
+    border-radius: 5%;
+  }
+
+  &__item--weight {
+    margin-right: auto;
+  }
+
+  &__item--time {
+    // margin-right: auto;
+  }
+
   &__text {
     font-family: Arial;
   }
@@ -19,19 +45,109 @@
     font-size: 24px;
     line-height: 24px;
     color: var(--basic_black);
+    text-transform: uppercase;
   }
 
   &__dd {
+    z-index: 2;
+    background-color: var(--special_light-grey);
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 10px;
     font-family: Arial;
     font-size: 12px;
     line-height: 12px;
+    margin: 0px;
   }
 
   &__info {
+    display: flex;
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
     color: var(--basic_black);
+    text-align: center;
+    margin: 26px auto 0px;
   }
 
+  &__img--after {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .example {
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    &__info {
+      flex-direction: column;
+      // width: 175px;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: right;
+      align-self: center;
+      margin-right: 0px;
+    }
+
+    &__item {
+      width: 162px;
+      padding: 15px 0px 20px;
+    }
+
+    &__item--weight {
+      margin-right: 42px;
+    }
+
+    &__dt {
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    &__dd {
+      font-size: 14px;
+      line-height: 14px;
+      top: 55px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .example {
+
+    padding: 0px 70px 110px;
+    justify-content: space-between;
+    margin-bottom: 75px;
+
+    &__title {
+      margin-bottom: 146px;
+    }
+
+    &__text {
+      margin-bottom: 69px;
+    }
+
+    &__desc {
+      width: 35%;
+    }
+
+    &__toggle {
+      width: 50%;
+    }
+
+    &__info {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      text-align: left;
+      margin: 55px 0px 0px;
+    }
+  }
 }
