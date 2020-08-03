@@ -33,5 +33,47 @@
     background-color: var(--basic_grey);
     line-height: 40px;
     font-size: 16px;
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .show-more {
+
+    border: 2px solid #F2F2F2;
+    margin: 0px;
+    padding: 0px 37px;
+    height: min-content;
+
+    &__title {
+      padding-top: 161px;
+      font-size: 20px;
+      line-height: 24px;
+      width: 134px;
+      margin: 0px auto 23px;
+      text-align: center;
+    }
+
+    &__info {
+      width: 167px;
+      font-size: 16px;
+      margin: 0px auto 87px;
+    }
+
+    &__btn {
+      width: 248px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .show-more {
+
+    &__btn {
+      width: 168px;
+    }
   }
 }
