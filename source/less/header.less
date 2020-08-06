@@ -1,18 +1,22 @@
 .header {
 
   &__wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 11px 20px 0px;
-    margin-bottom: 17px;
+    // display: flex;
+    // justify-content: space-between;
+    padding-top: 11px;
+    // margin-bottom: 17px;
   }
 
   &__logo {
-    padding-top: 24px;
+    padding: 24px 20px 0px;
   }
 
   &__logo--desktop {
     display: none;
+  }
+
+  &__logo--mobile {
+    margin-bottom: 15px;
   }
 }
 
@@ -21,7 +25,10 @@
   .header {
 
     &__wrap {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 65px;
+      padding: 0px 30px;
     }
 
     &__logo--mobile {
@@ -40,6 +47,7 @@
   .header {
 
     &__wrap {
+      padding-top: 11px;
       padding: 0 110px;
       margin-bottom: 110px;
     }

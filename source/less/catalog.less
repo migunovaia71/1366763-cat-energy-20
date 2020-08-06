@@ -1,26 +1,25 @@
 .catalog {
 
+  // padding: 0px 20px;
+
   &__title {
     font-weight: normal;
     font-size: 36px;
     line-height: 36px;
+    // margin: 0px -20px;
     padding: 30px 20px 40px;
     margin-bottom: 8px;
     border-top: 1px solid var(--special_light-grey-2);
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
+    .grid();
     padding: 0px;
-    margin: 0px;
   }
 
   &__item {
-    width: 320px;
-    max-width: 100%;
-    margin: 0px auto 20px;
+    .col-1;
+    margin: 0 10px 8px;
     padding: 0px 20px 25px;
     border-bottom: 1px solid var(--special_grey-2);
   }
@@ -56,6 +55,7 @@
   }
 
   &__btn {
+    display: block;
     font-family: "Oswald", "Arial Narrow", sans-serif;
     max-width: 280px;
     width: 100%;
@@ -75,6 +75,8 @@
 
   .catalog {
 
+    padding: 0px 30px;
+
     &__title {
       font-size: 60px;
       line-height: 60px;
@@ -85,10 +87,11 @@
     }
 
     &__list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 0px;
-      padding-left: 30px;
+      margin: 0 -30px -140px;
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    //   padding: 0px 30px;
+      padding-bottom: 70px;
     }
 
     &__wrap {
@@ -106,14 +109,12 @@
     }
 
     &__item {
-      width: 324px;
+      .col-2;
       position: relative;
       padding: 0px;
-      margin: 0px;
+      margin: 0 30px 140px;
       border: none;
       background: var(--basic_grey);
-      margin-bottom: 140px;
-      margin-right: 60px;
     }
 
     &__img {
@@ -143,32 +144,47 @@
 
     &__btn {
       width: 248px;
-      margin-left: 39px;
       margin-bottom: 40px;
     }
   }
 }
 
+// @media (min-width: 1160px) {
+//   .catalog {
+//     &__item {
+//       .col-3;
+//     }
+//   }
+// }
+
 @media (min-width: @desktop-width) {
 
   .catalog {
 
-    &__title {
-      padding: 0 110px;
-    }
+    padding: 0px 110px;
 
     &__list {
-      padding-left: 110px;
+      margin: 0 -40px -144px;
+      padding-bottom: 75px;
+      // padding-left: 110px;
     }
 
     &__item {
-      width: 245px;
-      margin-right: 80px;
+      .col-4;
+      margin: 0 40px 140px;
     }
 
     &__btn {
       width: 168px;
     }
-
   }
 }
+
+// @media (min-width: 1660px) {
+//   .catalog {
+
+//     &__item {
+//       .col-5
+//     }
+//   }
+// }
