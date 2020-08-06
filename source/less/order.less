@@ -104,6 +104,41 @@
     text-transform: uppercase;
   }
 
+  &__radio--label {
+    position: relative;
+    padding-left: 45px;
+  }
+
+  &__radio + &__radio--label::before {
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--special_grey);
+}
+
+  &__radio:checked + label::after {
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: var(--basic_green);
+    border-radius: 50%;
+}
+
+  &__radio:hover + &__radio--label::before {
+    border: 2px solid red;
+}
+
+  &__radio:hover + &__radio--label::after {
+    background-color: red;
+  }
+
   &__textarea {
     width: 100%;
     padding: 13px;
