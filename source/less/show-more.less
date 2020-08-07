@@ -1,10 +1,13 @@
 .show-more {
 
-  padding: 0px 20px 25px;
+  .col-1;
+  padding: 25px 0px;
   border-bottom: 1px solid var(--special_grey-2);
-  margin-bottom: 30px;
+  margin: 0 10px 30px;
 
   &__title {
+    position: relative;
+    padding-top: 80px;
     display: block;
     font-size: 16px;
     line-height: 20px;
@@ -12,6 +15,17 @@
     text-transform: uppercase;
     color: var(--extra_dark_grey);
     margin-bottom: 10px;
+  }
+
+  &__title::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: url("../img/plus.svg") no-repeat;
   }
 
   &__info {
@@ -26,7 +40,8 @@
 
   &__btn {
     display: block;
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
     text-align: center;
     color: var(--special_dark-grey);
     text-transform: uppercase;
@@ -42,8 +57,9 @@
   .show-more {
 
     border: 2px solid #F2F2F2;
-    margin: 0px;
-    padding: 0px 37px;
+    .col-2;
+    margin: 0 30px 140px;
+    padding: 0px 36px;
     height: min-content;
 
     &__title {
@@ -53,6 +69,13 @@
       width: 134px;
       margin: 0px auto 23px;
       text-align: center;
+    }
+
+    &__title::before {
+      width: 60px;
+      height: 60px;
+      top: 52px;
+      background: url("../img/plus-large.svg") no-repeat;
     }
 
     &__info {
@@ -71,6 +94,8 @@
 @media (min-width: @desktop-width) {
 
   .show-more {
+    .col-4;
+    margin: 0 40px 140px;
 
     &__btn {
       width: 168px;

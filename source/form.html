@@ -15,7 +15,7 @@
           <img class="header__logo--mobile" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Cat Energy">
           <img class="header__logo--desktop" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Cat Energy">
         </a>
-        <nav class="nav">
+        <nav class="nav nav--closed nav--nojs">
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Открыть или закрыть меню</span>
           </button>
@@ -25,7 +25,7 @@
                 <a href="index.html" class="nav__link">Главная</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="catalog.html">Каталог продукции</a>
+                <a href="catalog.html" class="nav__link">Каталог продукции</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link nav__item--activ">Подбор программы</a>
@@ -60,16 +60,16 @@
           <div class="order__wrap order__wrap--border">
             <ul class="order__list order__list--frame">
               <li class="order__item">
+                <input class="order__radio visually-hidden" type="radio" id="slim" name="goal" checked>
                 <label class="order__radio--label" for="slim">Похудение</label>
-                <input class="order__radio visually-hidden" type="radio" id="slim" name="slim" checked>
               </li>
               <li class="order__item">
+                <input class="order__radio visually-hidden" type="radio" id="pro" name="goal">
                 <label class="order__radio--label" for="pro">Набор массы</label>
-                <input class="order__radio visually-hidden" type="radio" id="pro" name="pro">
               </li>
               <li class="order__item">
+                <input class="order__radio visually-hidden" type="radio" id="advice" name="goal">
                 <label class="order__radio--label" for="advice">Не знаю (нужен ваш совет)</label>
-                <input class="order__radio visually-hidden" type="radio" id="advice" name="advice">
               </li>
             </ul>
           </div>
@@ -96,20 +96,20 @@
           <div class="order__subtitle">Дополнительно</div>
           <ul class="order__list order__list--extra">
             <li class="order__item order__item--extra">
-              <label class="order__checkbox--label" for="sugar">Сахарозаменитель</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
+              <label class="order__checkbox--label" for="sugar">Сахарозаменитель</label>
             </li>
             <li class="order__item order__item--extra">
-              <label class="order__checkbox--label" for="water">Питьевая вода</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="water" name="water">
+              <label class="order__checkbox--label" for="water">Питьевая вода</label>
             </li>
             <li class="order__item order__item--extra">
-              <label class="order__checkbox--label" for="milk">Молоко</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="milk" name="milk">
+              <label class="order__checkbox--label" for="milk">Молоко</label>
             </li>
             <li class="order__item order__item--extra">
-              <label class="order__checkbox--label" for="vitamin">Витамины</label>
               <input class="order__checkbox visually-hidden" type="checkbox" id="vitamin" name="vitamin">
+              <label class="order__checkbox--label" for="vitamin">Витамины</label>
             </li>
           </ul>
         </div>
@@ -157,7 +157,7 @@
           </li>
         </ul>
         <a class="footer__copywrite" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="footer_text">HTML Academy</span>
+          <span class="footer__text">HTML Academy</span>
           <svg width="35" height="42" viewBox="0 0 35 42" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g filter="url(#filter0_d)">
             <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="4" y="0" width="27" height="34">
@@ -186,6 +186,6 @@
         </a>
       </section>
     </footer>
-
+    <script src="js/menu.js"></script>
   </body>
 </html>

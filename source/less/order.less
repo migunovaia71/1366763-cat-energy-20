@@ -99,9 +99,79 @@
 
   &__radio--label,
   &__checkbox--label {
+    position: relative;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+    padding-left: 45px;
+  }
+
+  &__radio + &__radio--label::before {
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--special_grey);
+    cursor: pointer;
+  }
+
+  &__radio:checked + label::after {
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: var(--basic_green);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__radio:hover + &__radio--label::before,
+  &__radio:focus + &__radio--label::before {
+    border: 1px solid var(--dark_grey);
+  }
+
+  &__radio:disabled + &__radio--label::before,
+  &__radio:disabled + &__radio--label::after,
+  &__radio:disabled + &__radio--label {
+    opacity: 0.3;
+  }
+
+  &__checkbox + &__checkbox--label::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: -3px;
+    left: 0px;
+    border: 1px solid var(--special_grey);
+    cursor: pointer;
+  }
+
+  &__checkbox:checked + &__checkbox--label::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      top: -3px;
+      left: 0px;
+      border: 1px solid var(--special_grey);
+      background: url("../img/tick.svg") no-repeat center;
+  }
+
+  &__checkbox:hover + &__checkbox--label::before,
+  &__checkbox:focus + &__checkbox--label::before {
+    border: 1px solid var(--dark_grey);
+  }
+
+  &__checkbox:disabled + &__checkbox--label::before,
+  &__checkbox:disabled + &__checkbox--label::after,
+  &__checkbox:disabled + &__checkbox--label {
+    opacity: 0.3;
   }
 
   &__textarea {
@@ -248,6 +318,10 @@
     &__list--contact {
       flex-direction: row;
       justify-content: space-between;
+    }
+
+    &__input {
+      height: 50px;
     }
 
     &__item--contact {

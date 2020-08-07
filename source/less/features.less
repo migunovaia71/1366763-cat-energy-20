@@ -49,10 +49,19 @@
 
   .features {
     padding: 0 110px;
+    margin-bottom: 70px;
 
     &__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 94px;
+    }
+
+    &__item {
+      padding-top: 110px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 0px;
     }
   }
 }

@@ -6,10 +6,21 @@
   flex-direction: column;
 
   &__title {
+    position: relative;
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
     color: var(--basic_black);
+  }
+
+  &__title::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 240px;
+    background-color: var(--basic_green);
   }
 
   &__subtitle {
@@ -81,7 +92,7 @@
 @media (min-width: @tablet-width) {
   .additional {
 
-    padding: 0px 30px;
+    padding: 0px;
     margin-bottom: 76px;
 
     &__list {
@@ -92,14 +103,29 @@
 
     &__subtitle,
     &__wrap {
-      padding: 0px 37px;
+      // padding: 0px 37px;
     }
 
     &__title {
+      padding-left: 35px;
       font-size: 36px;
       line-height: 36px;
       margin: 0px;
       margin-bottom: 80px;
+    }
+
+    &__title::after {
+      left: 400px;
+    }
+
+    &__title::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 30px;
+      top: 50%;
+      left: -35px;
+      background-color: var(--basic_green);
     }
 
     &__subtitle {
@@ -114,19 +140,20 @@
     }
 
     &__item {
-      padding-bottom: 28px;
+      padding: 0px 37px 28px;
       margin-bottom: 26px;
     }
 
     &__item:last-child {
       border: none;
-      padding: 0px;
+      // padding: 0px;
       margin: 0px;
     }
 
     &__btn {
-      max-width: 632px;
-      margin: 0px 37px;
+      max-width: 100%;
+      // margin: 0px;
+      // margin: 0px 37px;
     }
 
     &__gift {
@@ -143,19 +170,32 @@
 @media (min-width: @desktop-width) {
   .additional {
 
-    padding: 0px 110px;
+    // padding: 0px 110px;
     margin-bottom: 86px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 
     &__title {
+      padding: 0px;
       width: 100%;
+    }
+
+    &__title::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 70px;
+      top: 50%;
+      left: -110px;
+      background-color: var(--basic_green);
     }
 
     &__list {
       border: none;
       padding: 0px;
+      flex-grow: 1;
+      margin-right: 80px;
     }
 
     &__item, &__item:last-child {
