@@ -53,9 +53,24 @@
   }
 
   &__subtitle {
+    position: relative;
+    display: block;
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 26px;
+    background-color: var(--basic_white);
+    padding-right: 20px;
+    z-index: 1;
+    font-weight: normal;
+  }
+
+  &__subtitle::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    background-color: var(--basic_green);
   }
 
   &__text {
@@ -86,6 +101,69 @@
     text-transform: uppercase;
     color: var(--special_dark-grey);
     padding: 13px 15px 15px;
+    cursor: pointer;
+    border: 1px solid var(--extra_light_grey);
+  }
+
+  &__item--email {
+    position: relative;
+  }
+
+  &__svg--email {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 13px;
+    right: 15px;
+    top: 18px;
+  }
+
+  &__input:invalid + &__svg--email {
+    fill: var(--status_error);
+  }
+
+  &__input:active + &__svg--email,
+  &__input:focus + &__svg--email {
+    fill: var(--basic_green);
+  }
+
+  &__item--tel {
+    position: relative;
+  }
+
+  &__svg--tel {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    right: 12px;
+    top: 15px;
+  }
+
+  &__input:invalid + &__svg--tel {
+    fill: var(--status_error);
+  }
+
+  &__input:active + &__svg--tel,
+  &__input:focus + &__svg--tel {
+    fill: var(--basic_green);
+  }
+
+  &__input:hover {
+    border: 1px solid var(--special_grey);
+  }
+
+  &__input:active,
+  &__input:focus {
+    border: 2px solid var(--special_dark-grey);
+    outline: none;
+    padding: 13px 15px 13px;
+  }
+
+  &__input:invalid {
+    border: 2px solid var(--status_error);
+    padding: 13px 15px 13px;
+
   }
 
   &__input::placeholder,
@@ -190,6 +268,17 @@
     font-size: 16px;
     border: none;
     margin-bottom: 23px;
+    cursor: pointer;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: var(--basic_green-2);
+  }
+
+  &__btn:active {
+    background-color: var(--basic_green-2);
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &__info {
@@ -235,8 +324,7 @@
       width: 50%;
     }
 
-    &__wrap,
-    &__wrap--btn {
+    &__wrap {
       padding: 0px 70px;
     }
 
@@ -247,15 +335,21 @@
     &__wrap--btn {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
+      padding: 0px 70px;
     }
 
     &__btn {
+      display: block;
       width: 282px;
+      font-size: 20px;
+      line-height: 52px;
     }
 
     &__info {
       text-align: left;
       width: 50%;
+      font-size: 16px;
     }
 
     &__list--frame {

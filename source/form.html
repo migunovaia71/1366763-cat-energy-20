@@ -45,15 +45,15 @@
             <ul class="order__list">
               <li class="order__item">
                 <label class="order__label" for="name">Имя:*</label>
-                <input class="order__input" type="text" id="name" name="name" required placeholder="Барсик">
+                <input class="order__input" type="text" id="name" name="name" required value="Барсик">
               </li>
               <li class="order__item">
                 <label class="order__label" for="weight">Вес&nbsp;(кг):*</label>
-                <input class="order__input" type="text" id="weight" name="weight" required placeholder="7">
+                <input class="order__input" type="text" id="weight" name="weight" required value="7">
               </li>
               <li class="order__item">
                 <label class="order__label" for="age">Возраст&nbsp;(лет):</label>
-                <input class="order__input" type="text" id="age" name="age" placeholder="7">
+                <input class="order__input" type="text" id="age" name="age" value="7">
               </li>
             </ul>
           </div>
@@ -75,25 +75,42 @@
           </div>
         </div>
         <div class="order__wrap">
-          <div class="order__subtitle">Контактные данные (владельца кота)</div>
+          <h2 class="order__subtitle--wrap">
+            <span class="order__subtitle">Контактные данные (владельца кота)</span>
+          </h2>
           <ul class="order__list order__list--contact">
-            <li class="order__item order__item--contact">
+            <li class="order__item order__item--contact order__item--email">
               <label class="order__label" for="email">E-mail:*</label>
-              <input class="order__input" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
+              <input class="order__input" type="email" id="email" name="email" required value="kuklachev@gmail.com">
+              <svg class="order__svg--email" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+              </svg>
             </li>
-            <li class="order__item order__item--contact">
+            <li class="order__item order__item--contact order__item--tel">
               <label class="order__label" for="tel">Телефон:*</label>
-              <input class="order__input" type="email" id="tel" name="tel" placeholder="8 (960) 900-60-90">
+              <input class="order__input order__input--tel" type="tel" id="tel" name="tel" required value="8 (960) 900-60-90">
+              <svg class="order__svg--tel" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                <path
+                  d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                C7.8,20,8.1,19.7,8.1,19.4z"/>
+              </svg>
             </li>
           </ul>
         </div>
         <div class="order__wrap">
-          <div class="order__subtitle">Комментарий</div>
+          <h2 class="order__subtitle--wrap">
+            <span class="order__subtitle">Комментарий</span>
+          </h2>
           <label class="visually-hidden" for="habits">Повадки кота</label>
-          <textarea class="order__textarea" rows="5" class="order__input" type="text" id="habits" name="habits" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="order__textarea" rows="5" class="order__input" type="text" id="habits" name="habits" value="Расскажите обо всех повадках кота"></textarea>
         </div>
         <div class="order__wrap">
-          <div class="order__subtitle">Дополнительно</div>
+          <h2 class="order__subtitle--wrap">
+            <span class="order__subtitle">Дополнительно</span>
+          </h2>
           <ul class="order__list order__list--extra">
             <li class="order__item order__item--extra">
               <input class="order__checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>

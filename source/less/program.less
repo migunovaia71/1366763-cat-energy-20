@@ -63,6 +63,20 @@
     position: absolute;
     background: url("../img/icon_arrow.svg") no-repeat;
   }
+
+  &__link:hover::after {
+    content: "";
+    left: 100px;
+    height: 50px;
+    width: 67px;
+    position: absolute;
+    background: url("../img/icon_arrow-long.svg") no-repeat;
+  }
+
+  &__link:active::after,
+  &__link:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -92,9 +106,11 @@
       display: none;
     }
 
-    &__link::after {
+    &__link::after,
+    &__link:hover::after {
       left: 120px;
     }
+
 
     &__text {
       width: 60%;

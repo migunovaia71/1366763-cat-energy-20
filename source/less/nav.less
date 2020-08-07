@@ -27,14 +27,14 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
-  &__link:disabled {
+  &__link[href]:active {
     color: rgba(0, 0, 0, 0.3);
   }
 
-  &__link[href]:active {
-    color: var(--basic_black);
-    border-bottom: 2px solid var(--basic_green);
-  }
+  // &__link[href]:active {
+  //   color: var(--basic_black);
+  //   border-bottom: 2px solid var(--basic_green);
+  // }
 
   &__toggle {
     position: absolute;
@@ -171,14 +171,14 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
-    &--main &__link:disabled {
+    &--main &__link:active {
       color: rgba(255, 255, 255, 0.3);
     }
 
-    &__link[href]:active {
-      color: var(--basic_black);
-      border-bottom: 2px solid var(--basic_green);
-    }
+    // &__link[href]:active {
+    //   color: var(--basic_black);
+    //   border-bottom: 2px solid var(--basic_green);
+    // }
 
     &__link {
       font-size: 20px;
