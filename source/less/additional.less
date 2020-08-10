@@ -11,6 +11,8 @@
     font-size: 24px;
     line-height: 24px;
     color: var(--basic_black);
+    margin: 0px;
+    margin-bottom: 46px;
   }
 
   &__title::after {
@@ -64,13 +66,13 @@
   &__item {
     display: flex;
     flex-direction: column;
-    padding-bottom: 19px;
+    padding-bottom: 18px;
     border-bottom: 1px solid var(--special_grey);
-    margin-bottom: 13px;
+    margin-bottom: 11px;
   }
 
   &__item:last-child {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
 
   &__btn {
@@ -108,13 +110,13 @@
 
     &__list {
       border: 1px solid var(--special_grey);
-      padding: 27px 0px;
+      padding: 27px 0px 0px;
       margin-bottom: 69px;
     }
 
-    &__subtitle,
     &__wrap {
-      // padding: 0px 37px;
+      margin-top: 0px;
+      margin-bottom: 24px;
     }
 
     &__title {
@@ -126,7 +128,7 @@
     }
 
     &__title::after {
-      left: 400px;
+      left: 412px;
     }
 
     &__title::before {
@@ -135,7 +137,7 @@
       height: 2px;
       width: 30px;
       top: 50%;
-      left: -35px;
+      left: -29px;
       background-color: var(--basic_green);
     }
 
@@ -150,8 +152,15 @@
       line-height: 20px;
     }
 
+    &__info {
+      margin-right: 50px;
+    }
+
     &__item {
-      padding: 0px 37px 28px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0px 37px 27px;
       margin-bottom: 26px;
     }
 
@@ -163,8 +172,6 @@
 
     &__btn {
       max-width: 100%;
-      // margin: 0px;
-      // margin: 0px 37px;
     }
 
     &__gift {
@@ -190,6 +197,7 @@
     &__title {
       padding: 0px;
       width: 100%;
+      margin-bottom: 85px;
     }
 
     &__title::before {
@@ -202,11 +210,17 @@
       background-color: var(--basic_green);
     }
 
+    &__title::after {
+      left: 373px;
+    }
+
     &__list {
       border: none;
       padding: 0px;
       flex-grow: 1;
+      margin: 0px;
       margin-right: 80px;
+
     }
 
     &__item, &__item:last-child {
@@ -225,7 +239,7 @@
 
     &__subtitle {
       padding: 0px;
-      width: 200px;
+      width: 290px;
     }
 
     &__btn {
@@ -237,7 +251,6 @@
     &__wrap {
       padding: 0px;
       margin: 0px;
-      margin-right: 40px;
       width: 290px;
     }
 

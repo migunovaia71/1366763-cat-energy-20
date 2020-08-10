@@ -13,14 +13,28 @@
     line-height: 40px;
     color: var(--basic_black);
     font-weight: normal;
+    margin: 0px;
+    margin-bottom: 38px;
   }
 
   &__item {
+    display: flex;
     font-family: Arial;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  &__leaf {
+    background: url("../img/advantage-leaf@1x.png") no-repeat center;
+    background-color: var(--basic_green);
   }
 }
 
@@ -28,19 +42,33 @@
 
   .features {
     padding: 0 30px;
+    padding-bottom: 82px;
+    margin: 0px;
+    border: 1px solid var(--light_grey);
 
     &__list {
       grid-template-columns: 1fr 1fr;
-      grid-row-gap: 37px;
-      grid-column-gap: 153px;
+      grid-row-gap: 113px;
+      grid-column-gap: 60px;
     }
 
     &__title {
       font-size: 60px;
+      margin-bottom: 83px;
     }
 
     &__item {
       font-size: 16px;
+      line-height: 24px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__img {
+      height: 80px;
+      width: 80px;
+      margin-bottom: 32px;
     }
   }
 }
@@ -50,14 +78,11 @@
   .features {
     padding: 0 110px;
     margin-bottom: 70px;
+    border: none;
 
     &__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 94px;
-    }
-
-    &__item {
-      padding-top: 110px;
     }
 
     &__item:not(:last-child) {

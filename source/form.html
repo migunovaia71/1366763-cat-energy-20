@@ -39,9 +39,9 @@
     <main class="main">
       <form class="order" action="https://echo.htmlacademy.ru" method="post">
         <h1 class="order__title">Подбор программы</h1>
-        <span class="order__text">Заполните форму, и мы подберем <br>программу питания для вашего кота</span>
+        <span class="order__text">Заполните анкету, и мы подберем <br>программу питания для вашего кота</span>
         <div class="order__wrap--cat">
-          <div class="order__wrap order__wrap--border">
+          <div class="order__wrap order__wrap--border order__wrap--cat-info">
             <ul class="order__list">
               <li class="order__item">
                 <label class="order__label" for="name">Имя:*</label>
@@ -57,17 +57,17 @@
               </li>
             </ul>
           </div>
-          <div class="order__wrap order__wrap--border">
+          <div class="order__wrap order__wrap--border order__wrap--radio">
             <ul class="order__list order__list--frame">
-              <li class="order__item">
+              <li class="order__item--radio">
                 <input class="order__radio visually-hidden" type="radio" id="slim" name="goal" checked>
                 <label class="order__radio--label" for="slim">Похудение</label>
               </li>
-              <li class="order__item">
+              <li class="order__item--radio">
                 <input class="order__radio visually-hidden" type="radio" id="pro" name="goal">
                 <label class="order__radio--label" for="pro">Набор массы</label>
               </li>
-              <li class="order__item">
+              <li class="order__item--radio">
                 <input class="order__radio visually-hidden" type="radio" id="advice" name="goal">
                 <label class="order__radio--label" for="advice">Не знаю (нужен ваш совет)</label>
               </li>
@@ -76,7 +76,7 @@
         </div>
         <div class="order__wrap">
           <h2 class="order__subtitle--wrap">
-            <span class="order__subtitle">Контактные данные (владельца кота)</span>
+            <span class="order__subtitle order__subtitle--2lines">Контактные данные (владельца кота)</span>
           </h2>
           <ul class="order__list order__list--contact">
             <li class="order__item order__item--contact order__item--email">
@@ -100,18 +100,18 @@
             </li>
           </ul>
         </div>
-        <div class="order__wrap">
+        <div class="order__wrap order__wrap--comment">
           <h2 class="order__subtitle--wrap">
             <span class="order__subtitle">Комментарий</span>
           </h2>
           <label class="visually-hidden" for="habits">Повадки кота</label>
-          <textarea class="order__textarea" rows="5" class="order__input" type="text" id="habits" name="habits" value="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="order__textarea" rows="8" class="order__input" type="text" id="habits" name="habits" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-        <div class="order__wrap">
-          <h2 class="order__subtitle--wrap">
+        <div class="order__wrap order__wrap--extra">
+          <h2 class="order__subtitle--wrap-extra">
             <span class="order__subtitle">Дополнительно</span>
           </h2>
-          <ul class="order__list order__list--extra">
+          <ul class="order__list--extra">
             <li class="order__item order__item--extra">
               <input class="order__checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
               <label class="order__checkbox--label" for="sugar">Сахарозаменитель</label>
@@ -138,7 +138,7 @@
     </main>
 
     <footer class="footer">
-      <section class="footer__address">
+      <section class="footer__address footer__address--bg">
         <span class="footer__address-slogan">Приглашаем<br> к сотрудничеству<br> дилеров!</span>
         <span class="footer__address-info">ул. Большая<br> Конюшенная, д. 19/8 <br>Санкт-Петербург</span>
       </section>
