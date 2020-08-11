@@ -59,7 +59,7 @@
     padding: 0 30px;
     padding-bottom: 82px;
     margin: 0px;
-    border: 1px solid var(--light_grey);
+    border-bottom: 1px solid var(--light_grey);
 
     &__list {
       grid-template-columns: 1fr 1fr;
@@ -73,6 +73,7 @@
     }
 
     &__item {
+      position: relative;
       font-size: 16px;
       line-height: 24px;
       flex-direction: column;
@@ -84,6 +85,35 @@
       height: 80px;
       width: 80px;
       margin-bottom: 32px;
+    }
+
+    &__leaf::after,
+    &__clock::after,
+    &__dining::after,
+    &__powder::after {
+      position: absolute;
+      font-size: 280px;
+      color: var(--basic_grey);
+      z-index: -1;
+      top: 88px;
+      left: 120px;
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+    }
+
+    &__leaf::after {
+      content: "1";
+    }
+
+    &__powder::after {
+      content: "2";
+    }
+
+    &__dining::after {
+      content: "3";
+    }
+
+    &__clock::after {
+      content: "4";
     }
   }
 }

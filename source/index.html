@@ -53,12 +53,26 @@
     <main class="main">
       <section class="program">
         <div class="program__wrap">
-          <h2 class="program__title program__title--slim">Похудение</h2>
+          <h2 class="program__title program__title--slim">
+            <picture> 
+              <source class="program__img--slim" media="(min-width: 1440px)" srcset="img/icon-cat-slim.svg"> 
+              <source class="program__img--slim" media="(min-width: 768px)" srcset="img/icon-cat-slim_tablet.svg"> 
+              <img class="program__img--slim" src="img/icon-cat-slim_desktop.svg" alt="Похудение">
+            </picture>
+            <span>Похудение</span>
+          </h2>
           <p class="program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="program__link" href="catalog-slim.html">Каталог Slim</a>
         </div>
         <div class="program__wrap">
-          <h2 class="program__title program__title--pro">Набор массы</h2>
+          <h2 class="program__title program__title--pro">
+            <picture> 
+              <source class="program__img--pro" media="(min-width: 1440px)" srcset="img/icon-cat-pro.svg"> 
+              <source class="program__img--pro" media="(min-width: 768px)" srcset="img/icon-cat-pro_tablet.svg"> 
+              <img class="program__img--pro" src="img/icon-cat-pro_desktop.svg" alt="Набор массы">
+            </picture>
+            <span>Набор массы</span>
+          </h2>
           <p class="program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="program__link" href="catalog-pro.html">Каталог Pro</a>
         </div>
@@ -106,10 +120,10 @@
           </dl>
         </div>
         <div class="example__toggle">
-            <picture class="example__img example__img--before"> 
-              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x"> 
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x"> 
-              <img src="img/before-mobile@1x.png" 
+            <picture> 
+              <source class="example__img" media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x"> 
+              <source class="example__img" media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x"> 
+              <img class="example__img" src="img/before-mobile@1x.png" 
                 srcset="img/before-mobile@1x.png 1x, img/before-mobile@2x.png 2x"
                 alt="Состояние было"> 
             </picture>
