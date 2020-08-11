@@ -15,6 +15,12 @@
     background: url("../img/index-background-mobile@1x.jpg") no-repeat;
     background-size: cover;
     background-position: top;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index-background-mobile@2x.jpg") no-repeat;
+      background-size: contain;
+    }
+
   }
 
   &__title {
@@ -41,9 +47,9 @@
     transform: translateX(-50%);
   }
 
-  &__img--desktop {
-    width: 270px;
-  }
+  // &__img--desktop {
+  //   width: 270px;
+  // }
 
   &__img--tablet {
     display: none;
