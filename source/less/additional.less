@@ -61,6 +61,11 @@
     line-height: 20px;
     color: var(--basic_white);
     text-align: center;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/gift-photo-mobile@2x.jpg") no-repeat;
+      background-size: contain;
+    }
   }
 
   &__item {
@@ -181,6 +186,11 @@
       background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
       height: 200px;
       width: 708px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/gift-photo-tablet@2x.jpg") no-repeat;
+        background-size: contain;
+      }
     }
   }
 }
@@ -261,6 +271,11 @@
       background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
       height: 289px;
       width: 245px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/gift-photo-desktop@2x.jpg") no-repeat;
+        background-size: contain;
+      }      
     }
   }
 }
