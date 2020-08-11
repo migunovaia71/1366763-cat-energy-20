@@ -3,10 +3,13 @@
   // margin-bottom: 21px;
 
   &__address {
-    padding: 28px 19px 22px;
+    padding: 28px 23px 32px 19px;
     display: flex;
     justify-content: space-between;
-    // background-color: var(--basic_grey);
+  }
+
+  &__address--bg {
+    background-color: var(--basic_grey);
   }
 
   &__address-slogan {
@@ -28,32 +31,64 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
+    padding: 38px 20px;
     background-color: var(--basic_grey);
   }
 
   &__logo {
     width: 100%;
     text-align: center;
-    padding-bottom: 32px;
+    padding-bottom: 26px;
     border-bottom: 1px solid var(--special_light-grey-2);
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+  }
+
+  &__logo:hover {
+    opacity: 0.8;
+  }
+
+  &__logo:active {
+    opacity: 0.6;
   }
 
   &__social {
     display: flex;
     padding: 0px;
     justify-content: space-around;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--special_light-grey-2);
     margin-bottom: 20px;
     width: 100%;
+  }
+
+  &__social--insta:hover path,
+  &__social--vk:hover path {
+    fill: #68B738;
+  }
+
+  &__social--fb:hover path {
+    stroke: #68B738;
+  }
+
+  &__social--insta:active path,
+  &__social--vk:active path,
+  &__social--fb:active path {
+    opacity: 0.3;
   }
 
   &__copywrite {
     width: 281px;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__text:hover + &__logo--academy path {
+    fill: #68B738;
+  }
+
+  &__text:active + &__logo--academy path,
+  &__text:active {
+    opacity: 0.3;
   }
 
   &__text {
@@ -70,7 +105,24 @@
   .footer {
 
     &__address {
-      padding: 66px 72px 55px 71px;
+      padding: 70px 75px 60px 70px;
+      margin: 0px;
+    }
+
+    &__address-slogan {
+      font-size: 20px;
+      line-height: 21px;
+    }
+
+    &__address-info {
+      display: block;
+      text-align: right;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__address-street {
+      margin-bottom: 12px;
     }
 
     &__map {
@@ -79,7 +131,7 @@
     }
 
     &__wrap {
-      padding: 55px 30px 61px;
+      padding: 52px 30px 61px 0px;
       flex-direction: row;
       width: 100%;
       justify-content: space-between;
@@ -111,6 +163,16 @@
       background-color: var(--basic_white);
       top: 95px;
       left: 110px;
+      padding-left: 76px;
+      padding-right: 90px;
+    }
+
+    &__address--bg {
+      background-color: var(--basic_white);
+    }
+
+    &__address-info {
+      text-align: left;
     }
 
     &__wrap {

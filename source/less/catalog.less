@@ -7,8 +7,9 @@
     font-size: 36px;
     line-height: 36px;
     // margin: 0px -20px;
-    padding: 30px 20px 40px;
-    margin-bottom: 8px;
+    padding: 25px 20px 40px;
+    margin: 0px;
+    // margin-bottom: 8px;
     border-top: 1px solid var(--special_light-grey-2);
   }
 
@@ -20,12 +21,8 @@
   &__item {
     .col-1;
     margin: 0 10px 8px;
-    padding: 0px 20px 25px;
+    padding: 0px 20px 22px;
     border-bottom: 1px solid var(--special_grey-2);
-  }
-
-  &__img {
-    padding-top: 25px;
   }
 
   &__wrap {
@@ -41,9 +38,11 @@
     font-weight: normal;
   }
 
+
   &__value {
     display: flex;
     justify-content: space-between;
+    width: 140px;
   }
 
   &__info,
@@ -68,6 +67,17 @@
     border: none;
     margin: 0px auto;
     padding: 0px;
+    cursor: pointer;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: var(--basic_green-2);
+  }
+
+  &__btn:active {
+    background-color: var(--basic_green-2);
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -80,14 +90,14 @@
     &__title {
       font-size: 60px;
       line-height: 60px;
-      padding: 0px 30px;
+      padding: 0px;
       margin: 0px;
       margin-bottom: 164px;
       border: none;
     }
 
     &__list {
-      margin: 0 -30px -140px;
+      margin: 0 -30px -148px;
     //   flex-direction: row;
     //   flex-wrap: wrap;
     //   padding: 0px 30px;
@@ -97,11 +107,11 @@
     &__wrap {
       padding-top: 161px;
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
     }
 
     &__subtitle {
-      margin: 0px auto;
+      margin: 0px auto 21px;
       font-size: 20px;
       line-height: 24px;
       width: 150px;
@@ -132,7 +142,7 @@
 
     &__value {
       width: 100%;
-      padding-bottom: 9px;
+      padding-bottom: 8px;
       margin-bottom: 7px;
       border-bottom: 1px solid var(--special_grey);
     }
