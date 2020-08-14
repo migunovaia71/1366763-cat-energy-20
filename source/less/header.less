@@ -1,16 +1,13 @@
 .header {
 
   &__wrap {
-    // display: flex;
-    // justify-content: space-between;
     padding-top: 11px;
-    // margin-bottom: 17px;
   }
 
   &__logo {
     padding: 24px 20px 0px;
   }
-
+  
   &__logo:hover,
   &__logo:focus {
     opacity: 0.8;
@@ -18,10 +15,6 @@
 
   &__logo:active {
     opacity: 0.6;
-  }
-
-  &__logo--desktop {
-    display: none;
   }
 
   &__logo--mobile {
@@ -36,21 +29,12 @@
     &__wrap {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 50px;
+      margin-bottom: 38px;
       padding: 0px 30px;
     }
 
     &__logo {
       padding: 24px 0px 0px;
-    }
-
-    &__logo--mobile {
-      display: none;
-    }
-
-    &__logo--desktop {
-      display: block;
-      width: 174px;
     }
 
   }
@@ -63,17 +47,9 @@
     &__wrap {
       padding-top: 11px;
       padding: 0 110px;
-      margin-bottom: 70px;
+      margin-bottom: 85px;
     }
 
-    &__logo--mobile {
-      display: none;
-    }
-
-    &__logo--desktop {
-      display: block;
-      width: 202px;
-    }
   }
 }
 
@@ -83,5 +59,10 @@
     background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;
     background-size: 50% auto;
     margin-bottom: 82px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat top right;
+      background-size: 50% auto;
+    }
   }
 }
