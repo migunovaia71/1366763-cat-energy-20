@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  // padding-top: 27px;
   margin-bottom: 22px;
   min-height: 480px;
 
@@ -44,19 +43,11 @@
     text-align: center;
   }
 
-  &__img--desktop{
+  &__img{
     position: absolute;
-    bottom: 15px;
+    bottom: 45px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  // &__img--desktop {
-  //   width: 270px;
-  // }
-
-  &__img--tablet {
-    display: none;
   }
 
   &__btn {
@@ -115,17 +106,13 @@
       display: none;
     }
 
-    &__img--tablet {
+    &__img {
       position: absolute;
       bottom: 0px;
       z-index: -1;
       display: block;
       left: 50%;
       transform: translateX(-50%);
-    }
-
-    &__img--desktop {
-      display: none;
     }
 
     &__btn {
@@ -145,11 +132,8 @@
     padding-left: 190px;
     min-height: 470px;
 
-    &__img--tablet {
-      display: none;
-    }
-
-    &__img--desktop {
+    &__img {
+      z-index: 1;
       display: block;
       width: 552px;
       top: -80px;

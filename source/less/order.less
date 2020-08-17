@@ -186,7 +186,8 @@
     fill: var(--basic_green);
   }
 
-  &__input:hover {
+  &__input:hover,
+  &__textarea:hover {
     border: 1px solid var(--special_grey);
   }
 
@@ -204,7 +205,8 @@
   }
 
   &__input::placeholder,
-  &__textarea::placeholder {
+  &__textarea::placeholder,
+  &__textarea {
     font-family: "Oswald", "Arial Narrow", sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -292,6 +294,7 @@
   &__textarea {
     width: 100%;
     padding: 13px;
+    border: 1px solid var(--extra_light_grey);
   }
 
   &__btn {
@@ -466,6 +469,7 @@
     &__label,
     &__input,
     &__input::placeholder,
+    &__textarea,
     &__textarea::placeholder,
     &__radio--label,
     &__checkbox--label {
