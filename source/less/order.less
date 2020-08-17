@@ -194,12 +194,12 @@
   &__input:focus {
     border: 2px solid var(--special_dark-grey);
     outline: none;
-    padding: 13px 15px 13px;
+    padding: 12px 39px 14px 14px;
   }
 
   &__input:invalid {
     border: 2px solid var(--status_error);
-    padding: 13px 15px 13px;
+    padding: 12px 14px 14px;
 
   }
 
@@ -554,7 +554,15 @@
     }
 
     &__item:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    &__wrap--cat-info  &__item:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &__item--email {
+      margin-bottom: 0px;
     }
 
     &__item--extra:nth-child(odd) {
