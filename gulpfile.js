@@ -11,6 +11,7 @@ const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const htmlreplace = require('gulp-html-replace');
+const minify = require('gulp-minifier');
 
 // Styles
 
@@ -68,18 +69,18 @@ const images = () => {
   imagemin.svgo()
   ]))
   }
-  
+
   exports.images = images;
-  
-//Sprite 
-  
+
+//Sprite
+
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"))
   }
-  
+
 exports.sprite = sprite;
 
 //Html
@@ -108,23 +109,33 @@ const copy = () => {
   })
   .pipe(gulp.dest("build"));
 };
-  
+
   exports.copy = copy;
-  
+
 //Delete
 
 const clean = () => {
   return del("build");
   };
-  
-const build = (done) => (
-  gulp.series(
-      clean,
-      copy,
-      styles,
-      sprite,
-      html
-      )(done)
-    );
 
+//Minify HTML, JS
+gulp.task('minify', function() {
+  return gulp.src('source/**/*').pipe(minify({
+    minify: true,
+    minifyHTML: {
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+    },
+    // minifyJS: {
+    //   sourceMap: true
+    // },
+    getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
+  })).pipe(gulp.dest('build'));
+});
+
+
+const build = gulp.series(clean, copy, styles, sprite, html);
 exports.build = build;
