@@ -1,11 +1,10 @@
 .footer {
 
-  // margin-bottom: 21px;
-
   &__address {
-    padding: 28px 23px 32px 19px;
+    padding: 28px 22px 32px 19px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__address--bg {
@@ -28,7 +27,7 @@
     max-width: 100%;
     width: 100%;
     border: none;
-    background: url("../img/bg-map-mobile@1x.png") no-repeat;
+    background: url("../img/bg-map-mobile@1x.png") no-repeat var(--basic_grey);
     background-position: center;
   }
 
@@ -115,9 +114,14 @@
       margin: 0px;
     }
 
+    &__address--wrap {
+      width: 160px;
+    }
+
     &__address-slogan {
       font-size: 20px;
-      line-height: 21px;
+      line-height: 26px;
+      width: 170px;
     }
 
     &__address-info {

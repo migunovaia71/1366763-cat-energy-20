@@ -116,6 +116,7 @@
     text-transform: uppercase;
     margin-bottom: 39px;
     padding: 0px 20px;
+    width: 270px;
   }
 
   &__label{
@@ -155,7 +156,8 @@
     top: 18px;
   }
 
-  &__input:invalid + &__svg--email {
+  &__input:invalid + &__svg--email,
+  &__input--invalid + &__svg--email {
     fill: var(--status_error);
   }
 
@@ -198,7 +200,8 @@
     padding: 12px 39px 14px 14px;
   }
 
-  &__input:invalid {
+  &__input:invalid,
+  &__input--invalid {
     border: 2px solid var(--status_error);
     padding: 12px 14px 14px;
 
@@ -225,7 +228,7 @@
 
   &__radio + &__radio--label::before {
     position: absolute;
-    top: -4px;
+    top: -5px;
     left: 0px;
     content: "";
     height: 30px;
@@ -252,9 +255,9 @@
     border: 1px solid var(--dark_grey);
   }
 
-  &__radio:disabled + &__radio--label::before,
-  &__radio:disabled + &__radio--label::after,
-  &__radio:disabled + &__radio--label {
+  &__radio:active + &__radio--label::before,
+  &__radio:active + &__radio--label::after,
+  &__radio:active + &__radio--label {
     opacity: 0.3;
   }
 
@@ -285,9 +288,9 @@
     border: 1px solid var(--dark_grey);
   }
 
-  &__checkbox:disabled + &__checkbox--label::before,
-  &__checkbox:disabled + &__checkbox--label::after,
-  &__checkbox:disabled + &__checkbox--label {
+  &__checkbox:active + &__checkbox--label::before,
+  &__checkbox:active + &__checkbox--label::after,
+  &__checkbox:active + &__checkbox--label {
     opacity: 0.3;
   }
 
@@ -346,7 +349,7 @@
       font-size: 20px;
       line-height: 30px;
       padding: 0px 70px;
-
+      width: 470px;
       margin-bottom: 66px;
     }
 
@@ -426,7 +429,7 @@
       height: 40px;
       width: 40px;
     }
-  
+
     &__radio:checked + label::after {
       top: 5px;
       left: 10px;
@@ -464,6 +467,11 @@
       border: 1px solid var(--special_light-grey-2);
       padding: 25px;
       margin-bottom: 57px;
+    }
+
+
+    &__input {
+      height: 50px;
     }
 
     &__label,
@@ -511,6 +519,7 @@
     &__text {
       padding: 0px 110px;
       margin-bottom: 66px;
+      width: 600px;
     }
 
     &__wrap, &__wrap--btn {
@@ -553,10 +562,6 @@
       justify-content: space-between;
     }
 
-    &__input {
-      height: 50px;
-    }
-
     &__item:not(:last-child) {
       margin-bottom: 0px;
     }
@@ -583,10 +588,6 @@
 
     &__btn {
       width: 568px;
-    }
-
-    &__info {
-      // display: none;
     }
 
     &__subtitle--wrap::after {

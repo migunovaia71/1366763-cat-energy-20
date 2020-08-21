@@ -8,6 +8,7 @@
   &__title--wrap {
     position: relative;
     margin-bottom: 30px;
+    width: 100%;
   }
 
   &__title--wrap::after {
@@ -16,7 +17,6 @@
     height: 2px;
     width: calc(100vw - 20px);
     top: 50%;
-    left: 0;
     background-color: var(--basic_green);
   }
 
@@ -61,7 +61,7 @@
     align-items: center;
     height: 289px;
     width: 280px;
-    background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+    background: url("../img/gift-photo-mobile@1x.jpg") no-repeat var(--basic_green);
     background-size: cover;
     background-position: center;
     font-family: Arial;
@@ -72,7 +72,7 @@
     margin: 0px auto;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/gift-photo-mobile@2x.jpg") no-repeat;
+      background: url("../img/gift-photo-mobile@2x.jpg") no-repeat var(--basic_green);
       background-size: cover;
       background-position: center;
     }
@@ -115,6 +115,10 @@
     background-color: var(--basic_green-2);
     color: rgba(255, 255, 255, 0.3);
   }
+
+  &__slogan {
+    width: 160px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -136,7 +140,7 @@
 
     &__title--wrap::after {
       width: 100vw;
-      left: -70px;
+      left: -30px;
     }
 
     &__title {
@@ -180,12 +184,15 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
+      background: url("../img/gift-photo-tablet@1x.jpg") no-repeat var(--basic_green);
+      background-size: cover;
       height: 200px;
       width: 708px;
+      margin: 0px;
+      width: 100%;
 
       @media (min-resolution: 2dppx) {
-        background: url("../img/gift-photo-tablet@2x.jpg") no-repeat;
+        background: url("../img/gift-photo-tablet@2x.jpg") no-repeat var(--basic_green);
         background-size: contain;
       }
     }
@@ -249,14 +256,14 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
+      background: url("../img/gift-photo-desktop@1x.jpg") no-repeat var(--basic_green);
       height: 289px;
       width: 245px;
 
       @media (min-resolution: 2dppx) {
-        background: url("../img/gift-photo-desktop@2x.jpg") no-repeat;
+        background: url("../img/gift-photo-desktop@2x.jpg") no-repeat var(--basic_green);
         background-size: contain;
-      }      
+      }
     }
   }
 }
