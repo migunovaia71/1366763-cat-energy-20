@@ -52,6 +52,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/js/**", gulp.series("js"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
@@ -90,10 +91,30 @@ const html = () => {
   .pipe(htmlreplace({
     'css': 'css/styles.min.css'
   }))
+  .pipe(minify({
+    minify: true,
+    minifyHTML: {
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+    }
+  }))
   .pipe(gulp.dest('build/'));
 };
 
 exports.html = html;
+
+const js = () => {
+  return gulp.src("source/js/**", {base: "source"})
+  .pipe(minify({
+    minify: true,
+    minifyJS: {
+      sourceMap: true
+    }
+  }))
+  .pipe(gulp.dest('build'));
+};
+
+exports.js = js;
 
 //Copy
 
@@ -101,9 +122,7 @@ const copy = () => {
   return gulp.src([
   "source/fonts/**/*.{woff,woff2}",
   "source/img/**",
-  "source/js/**",
-  "source/*.ico",
-  "source/*.html"
+  "source/*.ico"
 ], {
   base: "source"
   })
@@ -118,24 +137,5 @@ const clean = () => {
   return del("build");
   };
 
-//Minify HTML, JS
-gulp.task('minify', function() {
-  return gulp.src('source/**/*').pipe(minify({
-    minify: true,
-    minifyHTML: {
-      collapseWhitespace: true,
-      conservativeCollapse: true,
-    },
-    // minifyJS: {
-    //   sourceMap: true
-    // },
-    getKeptComment: function (content, filePath) {
-        var m = content.match(/\/\*![\s\S]*?\*\//img);
-        return m && m.join('\n') + '\n' || '';
-    }
-  })).pipe(gulp.dest('build'));
-});
-
-
-const build = gulp.series(clean, copy, styles, sprite, html);
+const build = gulp.series(clean, copy, styles, sprite, html, js);
 exports.build = build;
