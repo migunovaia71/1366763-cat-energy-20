@@ -1,11 +1,10 @@
 .header {
-
   &__wrap {
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 66px;
-    padding: 12px 20px 15px;
+    // height: 66px;
+    padding: 12px 20px 13px;
   }
 
   &__logo {
@@ -23,12 +22,10 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .header {
-
     &__wrap {
-      // display: flex;
-      // justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
       height: auto;
       align-items: center;
       margin-bottom: 38px;
@@ -36,26 +33,21 @@
     }
 
     &__logo {
-      padding: 0px;
+      padding: 0;
     }
-
   }
 }
 
 @media (min-width: @desktop-width) {
-
   .header {
-
     &__wrap {
       padding: 50px 110px;
       margin-bottom: 85px;
     }
-
   }
 }
 
 @media (min-width: @desktop-width) {
-
   .header--main {
     background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;
     background-size: 50% auto;

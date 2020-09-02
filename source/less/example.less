@@ -2,12 +2,12 @@
 
   display: flex;
   flex-wrap: wrap;
-  padding: 25px 0px 83px;
+  padding: 25px 0 40px;
   // margin-bottom: 28px;
   background-color: var(--special_light-grey);
 
   &__desc {
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 
   &__title {
@@ -15,13 +15,13 @@
     line-height: 40px;
     color: var(--basic_black);
     font-weight: normal;
-    margin: 0px;
+    margin: 0;
     margin-bottom: 33px;
   }
 
   &__stats {
     display: flex;
-    margin: 0px;
+    margin: 0;
     margin-bottom: 35px;
     flex-wrap: wrap;
   }
@@ -30,7 +30,7 @@
     position: relative;
     width: 124px;
     text-align: center;
-    padding: 15px 0px 18px;
+    padding: 15px 0 18px;
     border: 1px solid var(--special_grey);
     border-radius: 5%;
   }
@@ -40,8 +40,8 @@
   }
 
   &__text {
-    font-family: Arial;
-    margin: 0px;
+    font-family: "Arial", "Arial Narrow", sans-serif;
+    margin: 0;
     margin-bottom: 25px;
   }
 
@@ -59,11 +59,11 @@
     top: 42px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0px 10px;
-    font-family: Arial;
+    padding: 0 10px;
+    font-family: "Arial", "Arial Narrow", sans-serif;
     font-size: 12px;
     line-height: 12px;
-    margin: 0px;
+    margin: 0;
   }
 
   &__info {
@@ -73,19 +73,56 @@
     text-transform: uppercase;
     color: var(--basic_black);
     text-align: center;
-    margin: 30px auto 0px;
+    margin: 30px auto 0;
+  }
+
+  &__img-wrap {
+    margin-bottom: 25px;
+  }
+
+  &__toggle {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__toggle::before {
+    position: absolute;
+    content: "";
+    width: 84px;
+    height: 14px;
+    background-color: var(--basic_white);
+    border: 1px solid var(--special_grey);
+    border-radius: 6px;
+    top: 3px;
+    left: 58px;
+  }
+
+  &__toggle::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 6px;
+    background-color: var(--basic_green);
+    border-radius: 6px;
+    top: 7px;
+    left: 65px;
   }
 }
 
 @media (min-width: @tablet-width) {
-
   .example {
     position: relative;
-    padding: 40px 0px 105px;
+    padding: 40px 0 70px;
     background-color: var(--basic_white);
 
     &__desc {
-      padding: 0px 30px;
+      padding: 0 30px;
       margin-bottom: 53px;
     }
 
@@ -118,13 +155,13 @@
       line-height: 30px;
       text-align: right;
       align-self: center;
-      margin: 0px;
+      margin: 0;
       // margin: 0 auto;
     }
 
     &__item {
       width: 162px;
-      padding: 15px 0px 20px;
+      padding: 15px 0 20px;
     }
 
     &__item--weight {
@@ -143,7 +180,7 @@
       background-color: var(--basic_white);
     }
 
-    &:before {
+    &::before {
       position: absolute;
       content: "";
       height: 43%;
@@ -153,29 +190,64 @@
       z-index: 1;
     }
 
-    &__toggle {
+    &__img-wrap {
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       width: 100%;
+    }
+
+    &__toggle {
+      z-index: 10;
+      width: 570px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__state {
+      border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+    }
+
+    &__toggle::before {
+      width: 428px;
+      height: 6px;
+      background-color: var(--extra_dark_grey);
+      border-radius: 6px;
+      top: 12px;
+      left: 71px;
+      border: none;
+    }
+
+    &__toggle::after {
+      width: 34px;
+      height: 34px;
+      border: 13px solid var(--basic_white);
+      background-color: var(--basic_green);
+      border-radius: 50%;
+      top: -2px;
+      left: 268px;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-
   .example {
 
-    padding: 0px;
+    padding: 0;
     justify-content: space-between;
     // margin-bottom: 75px;
 
-    &:before {
+    &::before {
       height: 73%;
     }
 
     &__desc {
-      padding: 0px 110px;
+      padding: 0 110px;
       margin-bottom: 53px;
+      z-index: 2;
+      width: 45%;
     }
 
     &__title {
@@ -187,17 +259,13 @@
       margin-bottom: 69px;
     }
 
-    &__desc {
-      z-index: 2;
-      width: 45%;
-    }
-
     &__dd {
       background-color: var(--special_light-grey);
     }
 
-    &__toggle {
+    &__img-wrap {
       width: 55%;
+      margin-top: -30px;
     }
 
     &__info {
@@ -205,7 +273,7 @@
       justify-content: space-between;
       width: 330px;
       text-align: left;
-      margin: 55px 0px 0px;
+      margin: 55px 0 0;
     }
   }
 }

@@ -21,19 +21,19 @@
     font-size: 36px;
     line-height: 36px;
     padding: 25px 20px 40px;
-    margin: 0px;
+    margin: 0;
     border-top: 1px solid var(--special_light-grey-2);
   }
 
   &__list {
     .grid();
-    padding: 0px;
+    padding: 0;
   }
 
   &__item {
     .col-1;
     margin: 0 10px 8px;
-    padding: 0px 20px 22px;
+    padding: 0 20px 22px;
     border-bottom: 1px solid var(--special_grey-2);
   }
 
@@ -59,7 +59,7 @@
 
   &__info,
   &__number {
-    font-family: Arial;
+    font-family: "Arial", "Arial Narrow", sans-serif;
     color: var(--special_dark-grey);
     font-size: 12px;
     line-height: 16px;
@@ -77,8 +77,8 @@
     line-height: 40px;
     font-size: 16px;
     border: none;
-    margin: 0px auto;
-    padding: 0px;
+    margin: 0 auto;
+    padding: 0;
     cursor: pointer;
   }
 
@@ -94,16 +94,15 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .catalog {
 
-    padding: 0px 30px;
+    padding: 0 30px;
 
     &__title {
       font-size: 60px;
       line-height: 60px;
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
       margin-bottom: 164px;
       border: none;
     }
@@ -115,9 +114,6 @@
 
     &__list {
       margin: 0 -30px -148px;
-    //   flex-direction: row;
-    //   flex-wrap: wrap;
-    //   padding: 0px 30px;
       padding-bottom: 70px;
     }
 
@@ -128,7 +124,7 @@
     }
 
     &__subtitle {
-      margin: 0px auto 21px;
+      margin: 0 auto 21px;
       font-size: 20px;
       line-height: 24px;
       width: 150px;
@@ -138,7 +134,7 @@
     &__item {
       .col-2;
       position: relative;
-      padding: 0px;
+      padding: 0;
       margin: 0 30px 140px;
       border: none;
       background: var(--basic_grey);
@@ -153,7 +149,7 @@
 
     &__values {
       width: 100%;
-      padding: 0px 36px;
+      padding: 0 36px;
     }
 
     &__value {
@@ -166,7 +162,7 @@
     &__info,
     &__number {
       font-size: 16px;
-  }
+    }
 
     &__btn {
       width: 248px;
@@ -175,19 +171,10 @@
   }
 }
 
-// @media (min-width: 1160px) {
-//   .catalog {
-//     &__item {
-//       .col-3;
-//     }
-//   }
-// }
-
 @media (min-width: @desktop-width) {
-
   .catalog {
 
-    padding: 0px 110px;
+    padding: 0 110px;
 
     &__title--wrap::after {
       width: 100vw;

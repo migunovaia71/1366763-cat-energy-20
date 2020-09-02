@@ -20,7 +20,6 @@
       background: url("../img/index-background-mobile@2x.jpg") no-repeat var(--basic_green);
       background-size: cover;
     }
-
   }
 
   &__title {
@@ -29,7 +28,7 @@
     color: var(--basic_white);
     font-weight: normal;
     text-align: center;
-    margin: 0px;
+    margin: 0;
     padding-top: 27px;
     margin-bottom: 25px;
   }
@@ -43,7 +42,7 @@
     text-align: center;
   }
 
-  &__img{
+  &__img {
     position: absolute;
     bottom: 45px;
     left: 50%;
@@ -72,16 +71,14 @@
     background-color: var(--basic_green-2);
     color: rgba(255, 255, 255, 0.3);
   }
-
 }
 
 @media (min-width: @tablet-width) {
-
   .index-info {
     align-items: start;
-    padding: 0px 117px;
+    padding: 0 117px;
     min-height: 810px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     &__title,
     &__slogan {
@@ -92,9 +89,9 @@
       font-size: 60px;
       line-height: 60px;
       text-align: left;
-      margin: 0px;
+      margin: 0;
       margin-bottom: 40px;
-      padding: 0px;
+      padding: 0;
       width: 500px;
     }
 
@@ -109,7 +106,7 @@
 
     &__img {
       position: absolute;
-      bottom: 0px;
+      bottom: 0;
       z-index: -1;
       display: block;
       left: 50%;
@@ -117,7 +114,7 @@
     }
 
     &__btn {
-      margin-top: 0px;
+      margin-top: 0;
       align-self: flex-start;
       width: 244px;
       font-size: 20px;
@@ -127,9 +124,7 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .index-info {
-
     padding-left: 190px;
     min-height: 470px;
 

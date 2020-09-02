@@ -4,8 +4,8 @@
 
   &__list {
     display: grid;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
   }
 
   &__title {
@@ -13,13 +13,13 @@
     line-height: 40px;
     color: var(--basic_black);
     font-weight: normal;
-    margin: 0px;
+    margin: 0;
     margin-bottom: 38px;
   }
 
   &__item {
     display: flex;
-    font-family: Arial;
+    font-family: "Arial", "Arial Narrow", sans-serif;
   }
 
   &__item:not(:last-child) {
@@ -54,11 +54,10 @@
 }
 
 @media (min-width: @tablet-width) {
-
   .features {
     padding: 0 30px;
     padding-bottom: 82px;
-    margin: 0px;
+    margin: 0;
     border-bottom: 1px solid var(--light_grey);
 
     &__list {
@@ -119,19 +118,18 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .features {
     padding: 0 110px;
     margin-bottom: 70px;
     border: none;
 
     &__list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 94px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 94px;
     }
 
     &__item:not(:last-child) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &__text {

@@ -1,8 +1,15 @@
-.nav {
+@media (max-width: @mobile-width-only) {
+  .nav {
+    &--closed &__item {
+      display: none;
+    }
+  }
+}
 
+.nav {
   &__list {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     text-align: center;
   }
 
@@ -28,7 +35,7 @@
 
   &__toggle {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     z-index: 2;
     display: block;
@@ -37,7 +44,7 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
-    padding: 0px;
+    padding: 0;
   }
 
   &__toggle:active,
@@ -75,39 +82,39 @@
     background-color: var(--basic_white);
   }
 
+  &--nojs {
+    padding-top: 10px;
+  }
+
   &--nojs &__toggle {
     display: none;
   }
 
   &--nojs &__wrap {
     position: static;
-    // min-height: 0;
+    min-height: 0;
+    width: 100%;
+    background-color: var(--basic_white);
   }
 
   &--nojs &__item {
     display: block;
-  }
-
-}
-
-@media (max-width: @mobile-width-only) {
-  .nav {
-    &--closed &__list {
-      display: none;
-    }
+    margin: 0 -20px 24px;
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .nav {
+    &--nojs &__item {
+      margin: 0;
+    }
 
     &__toggle {
       display: none;
     }
 
     &__wrap {
-      padding-top: 0px;
+      padding-top: 0;
     }
 
     &__list {
@@ -124,12 +131,12 @@
 
     &__item {
       border: none;
-      padding-top: 0px;
-      margin-bottom: 0px;
+      padding-top: 0;
+      margin-bottom: 0;
       // padding-bottom: 10px;
     }
 
-    &__item--activ {
+    &__link--activ {
       padding-bottom: 10px;
       border-bottom: 2px solid var(--basic_green);
     }
@@ -137,22 +144,20 @@
     &__item:not(:last-child) {
       margin-right: 35px;
     }
-
-    &__toggle {
-      display: none;
-    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .nav {
+    &--nojs &__wrap {
+      background-color: transparent;
+    }
 
-    &--main &__link
-      {
-        color: var(--basic_white);
-      }
+    &--main &__link {
+      color: var(--basic_white);
+    }
 
-    &--main &__item--activ {
+    &--main &__link--activ {
       border-bottom: 2px solid var(--basic_white);
     }
 
